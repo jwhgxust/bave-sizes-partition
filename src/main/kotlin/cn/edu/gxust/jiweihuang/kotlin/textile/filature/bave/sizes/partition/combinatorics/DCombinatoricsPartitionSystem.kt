@@ -67,7 +67,7 @@ fun main(args: Array<String>) {
     System.out.println("计算值   :" + droppingProbability.nonBrokenLengthProbabilities())
     println("模拟获得的中途落绪位置统计结果：")
     System.out.println(recorder.midwayDroppingPosesFrequency())
-    System.out.println("计算值   :" + droppingProbability.normalizedDroppingProbabilities)
+    System.out.println("计算值   :" + droppingProbability.droppingsNormalized)
 
     val recorder2 = stepwise.normalLengthBiasSim(100000,
             baveLength.toDouble(), 3.0, 6, averageDroppingProbability, droppingUniformity, minDroppingPosRatio)
@@ -76,7 +76,7 @@ fun main(args: Array<String>) {
     System.out.println(recorder2.partLengthFrequency())
     println("模拟获得的中途落绪位置统计结果：")
     System.out.println(recorder2.midwayDroppingPosesFrequency())
-    System.out.println("计算值   :" + droppingProbability.normalizedDroppingProbabilities)
+    System.out.println("计算值   :" + droppingProbability.droppingsNormalized)
 
     println("运行时间：" + (System.currentTimeMillis() - start))
 }

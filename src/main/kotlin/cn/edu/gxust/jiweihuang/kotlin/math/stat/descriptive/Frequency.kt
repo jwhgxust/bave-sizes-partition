@@ -13,7 +13,7 @@ class Frequency<T : Comparable<T>> : org.hipparchus.stat.Frequency<T> {
     constructor(comparator: Comparator<in T>) : super(comparator)
 
     fun add(value: T) {
-        this.addValue(value)
+        addValue(value)
     }
 
     fun addAll(data: Collection<T>) {
